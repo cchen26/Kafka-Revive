@@ -59,9 +59,3 @@ export class KafkaConsumerWrapper {
     }
   }
 }
-
-//Make it all methods
-//Remove innerConsumer/innerProducer
-//Test
-//https://stackoverflow.com/questions/3895453/how-do-i-make-a-git-commit-in-the-past
-//
