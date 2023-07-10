@@ -1,4 +1,4 @@
-import { KafkaDLQManager } from "../src/KafkaDLQManager";
+import { KafkaDLQManager } from "../src/DLQManager";
 
 describe("KafkaDLQManager", () => {
   let mockClient: any;

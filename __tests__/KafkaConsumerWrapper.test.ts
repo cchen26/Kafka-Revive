@@ -1,4 +1,4 @@
-import { KafkaConsumerWrapper } from "../src/KafkaConsumerWrapper";
+import { KafkaConsumerWrapper } from "../src/ConsumerWrapper";
 
 describe("KafkaConsumerWrapper", () => {
   let mockClient: any;

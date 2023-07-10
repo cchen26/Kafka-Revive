@@ -1,4 +1,4 @@
-import { KafkaProducerWrapper } from "../src/KafkaProducerWrapper";
+import { KafkaProducerWrapper } from "../src/ProducerWrapper";
 import { ErrorHandling } from "../src/ErrorHandling";
 
 describe("KafkaProducerWrapper", () => {
