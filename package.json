@@ -10,6 +10,13 @@
     "type": "git",
     "url": "git+https://github.com/cchen26/Kafka-Revive.git"
   },
+  "keywords": [
+    "kafkajs",
+    "Message re-processing",
+    "kafka",
+    "Dead Letter Queue",
+    "Kafkajs wrapper"
+  ],
   "author": "Chao Chen",
   "license": "MIT",
   "bugs": {
