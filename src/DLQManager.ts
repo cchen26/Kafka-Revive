@@ -5,7 +5,7 @@ import {
 } from "./Interfaces";
 import { ErrorHandling } from "./ErrorHandling";
 
-export class KafkaDLQManager {
+export class DLQManager {
   client: any;
   topic: string;
   callback?: (message: any) => boolean;

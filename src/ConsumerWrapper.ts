@@ -4,7 +4,7 @@ import {
 } from "./Interfaces";
 import { ErrorHandling } from "./ErrorHandling";
 
-export class KafkaConsumerWrapper {
+export class ConsumerWrapper {
   private client: any;
   private topic: string;
   private callback?: (message: any) => boolean;

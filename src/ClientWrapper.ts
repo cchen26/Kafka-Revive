@@ -5,7 +5,7 @@ import {
 } from "./Interfaces";
 import { ErrorHandling } from "./ErrorHandling";
 
-export class KafkaClientWrapper {
+export class ClientWrapper {
   client: any;
   topic: string;
   callback?: (message: any) => boolean;
