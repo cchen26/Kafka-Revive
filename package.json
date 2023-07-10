@@ -2,7 +2,7 @@
   "name": "kafka-revive",
   "version": "1.0.0",
   "description": "Lightweight Message Re-processing Wrapper Library for KafkaJs",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "jest"
   },
