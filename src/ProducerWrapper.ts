@@ -1,7 +1,7 @@
 import { MessagePayload } from "./Interfaces";
 import { ErrorHandling } from "./ErrorHandling";
 
-export class KafkaProducerWrapper {
+export class ProducerWrapper {
   private successEventHandlers: Function[];
 
   constructor(private retry: number, private kafkaJSClient: any) {

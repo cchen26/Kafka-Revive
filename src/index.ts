@@ -1,13 +1,13 @@
-import { KafkaProducerWrapper } from "./ProducerWrapper";
-import { KafkaDLQManager } from "./DLQManager";
-import { KafkaConsumerWrapper } from "./ConsumerWrapper";
-import { KafkaClientWrapper } from "./ClientWrapper";
+import { ProducerWrapper } from "./ProducerWrapper";
+import { DLQManager } from "./DLQManager";
+import { ConsumerWrapper } from "./ConsumerWrapper";
+import { ClientWrapper } from "./ClientWrapper";
 import { ErrorHandling } from "./ErrorHandling";
 
 export {
-  KafkaProducerWrapper,
-  KafkaDLQManager,
-  KafkaConsumerWrapper,
-  KafkaClientWrapper,
+  ProducerWrapper,
+  DLQManager,
+  ConsumerWrapper,
+  ClientWrapper,
   ErrorHandling,
 };
