@@ -33,7 +33,7 @@ export class ErrorHandling extends Error {
     return `${year}-${month}-${day}-[${hours}-${minutes}-${seconds}-${milliseconds}]`;
   }
 
-  private logError() {
+  private logError(): void {
     const errorMessage =
       `Error occurred at [Class: ${this.className}] | [Method: ${this.methodName}] [Side: ${this.side}]\n` +
       `Time: ${this.currentTime}\n` +

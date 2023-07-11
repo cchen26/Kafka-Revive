@@ -22,7 +22,7 @@ export class DLQManager {
     this.admin = this.client.admin();
   }
 
-  async createDLQ() {
+  async createDLQ(): Promise<void> {
     await this.admin.connect();
     try {
       await this.admin.createTopics({
@@ -42,7 +42,7 @@ export class DLQManager {
     }
   }
 
-  producerConnect() {
+  producerConnect(): () => Promise<void> {
     const producer = this.client.producer();
     const self = this;
 
@@ -52,7 +52,7 @@ export class DLQManager {
     };
   }
 
-  producerDisconnect() {
+  producerDisconnect(): () => Promise<void> {
     const producer = this.client.producer();
 
     return async function () {
@@ -60,7 +60,7 @@ export class DLQManager {
     };
   }
 
-  producerSend(message: MessagePayload) {
+  producerSend(message: MessagePayload): () => Promise<void> {
     const producer = this.client.producer();
 
     return async () => {
@@ -73,7 +73,7 @@ export class DLQManager {
       } catch (e: any) {
         await producer.send({
           messages: message.messages,
-          topic: `${this.topic}.deadLetterQueue`,
+          topic: `${this.topic}.DeadLetterQueue`,
         });
         await producer.disconnect();
         const newError = new ErrorHandling(
@@ -86,7 +86,7 @@ export class DLQManager {
     };
   }
 
-  consumerConnect(groupId: { groupId: string }) {
+  consumerConnect(groupId: { groupId: string }): () => Promise<void> {
     const consumer = this.client.consumer(groupId);
     const self = this;
 
@@ -96,7 +96,7 @@ export class DLQManager {
     };
   }
 
-  consumerSubscribe(input?: ConsumerSubscriptionOptions) {
+  consumerSubscribe(input?: ConsumerSubscriptionOptions): () => Promise<void> {
     const consumer = this.client.consumer();
     const self = this;
 
@@ -109,7 +109,7 @@ export class DLQManager {
     };
   }
 
-  consumerRun(input: ConsumerMessageHandler) {
+  consumerRun(input: ConsumerMessageHandler): () => Promise<void> {
     const consumer = this.client.consumer();
     const self = this;
 
@@ -160,13 +160,13 @@ export class DLQManager {
     };
   }
 
-  retryConnect() {
+  retryConnect(): Promise<void> {
     const dlqConsumer = this.client.consumer({ groupId: "dlq-consumer-group" });
 
     return dlqConsumer.connect();
   }
 
-  retryProcessMessages() {
+  retryProcessMessages(): () => Promise<void> {
     const dlqConsumer = this.client.consumer({ groupId: "dlq-consumer-group" });
     const producerConnect = this.producerConnect();
     const self = this;

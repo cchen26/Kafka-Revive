@@ -22,7 +22,10 @@ export class ClientWrapper {
     this.admin = this.client.admin();
   }
 
-  createProducer() {
+  createProducer(): {
+    connect: () => Promise<void>;
+    send: (message: MessageOptions) => Promise<void>;
+  } {
     const { client, topic } = this;
 
     return {
@@ -44,7 +47,11 @@ export class ClientWrapper {
     };
   }
 
-  createConsumer(groupId: { groupId: string }) {
+  createConsumer(groupId: { groupId: string }): {
+    connect: () => Promise<void>;
+    subscribe: (input?: ConsumerSubscriptionOptions) => Promise<void>;
+    run: (input: ConsumerMessageHandler) => Promise<void>;
+  } {
     const { client, callback, topic } = this;
     const consumer = client.consumer(groupId);
 

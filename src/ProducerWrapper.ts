@@ -8,15 +8,15 @@ export class ProducerWrapper {
     this.successEventHandlers = [];
   }
 
-  public connect() {
+  public connect(): Promise<void> {
     return this.kafkaJSClient.producer().connect();
   }
 
-  public disconnect() {
+  public disconnect(): Promise<void> {
     return this.kafkaJSClient.producer().disconnect();
   }
 
-  public send(message: MessagePayload) {
+  public send(message: MessagePayload): Promise<any> {
     const producer = this.kafkaJSClient.producer({
       retry: {
         retries: this.retry,
@@ -35,11 +35,11 @@ export class ProducerWrapper {
       });
   }
 
-  public onSuccess(handler: Function) {
+  public onSuccess(handler: Function): void {
     this.successEventHandlers.push(handler);
   }
 
-  private emitSuccessEvent(result: any) {
+  private emitSuccessEvent(result: any): void {
     this.successEventHandlers.forEach((handler: Function) => {
       handler(result);
     });

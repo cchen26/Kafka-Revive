@@ -19,13 +19,13 @@ export class ConsumerWrapper {
     this.callback = callback;
   }
 
-  public connect(groupId: { groupId: string }) {
+  public connect(groupId: { groupId: string }): any {
     const consumer = this.client.consumer(groupId);
     consumer.connect = consumer.connect.bind(consumer);
     return consumer;
   }
 
-  public subscribe(consumer: any, input?: ConsumerSubscriptionOptions) {
+  public subscribe(consumer: any, input?: ConsumerSubscriptionOptions): any {
     const { topic, fromBeginning, ...rest } = input || {};
     return consumer.subscribe({
       topic: this.topic,
@@ -34,7 +34,7 @@ export class ConsumerWrapper {
     });
   }
 
-  public run(consumer: any, input: ConsumerMessageHandler) {
+  public run(consumer: any, input: ConsumerMessageHandler): void {
     const { eachMessage, ...rest } = input;
     consumer.run({
       ...rest,
@@ -53,7 +53,7 @@ export class ConsumerWrapper {
     });
   }
 
-  public disconnect() {
+  public disconnect(): Promise<void> | undefined {
     if (this.client) {
       return this.client.disconnect();
     }
