@@ -9,9 +9,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.KafkaClientWrapper = void 0;
+exports.ClientWrapper = void 0;
 const ErrorHandling_1 = require("./ErrorHandling");
-class KafkaClientWrapper {
+class ClientWrapper {
     constructor(client, topic, callback) {
         this.topic = topic;
         this.client = client;
@@ -57,4 +57,4 @@ class KafkaClientWrapper {
         };
     }
 }
-exports.KafkaClientWrapper = KafkaClientWrapper;
+exports.ClientWrapper = ClientWrapper;

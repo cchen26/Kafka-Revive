@@ -1,13 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ErrorHandling = exports.KafkaClientWrapper = exports.KafkaConsumerWrapper = exports.KafkaDLQManager = exports.KafkaProducerWrapper = void 0;
+exports.ErrorHandling = exports.ClientWrapper = exports.ConsumerWrapper = exports.DLQManager = exports.ProducerWrapper = void 0;
 const ProducerWrapper_1 = require("./ProducerWrapper");
-Object.defineProperty(exports, "KafkaProducerWrapper", { enumerable: true, get: function () { return ProducerWrapper_1.KafkaProducerWrapper; } });
+Object.defineProperty(exports, "ProducerWrapper", { enumerable: true, get: function () { return ProducerWrapper_1.ProducerWrapper; } });
 const DLQManager_1 = require("./DLQManager");
-Object.defineProperty(exports, "KafkaDLQManager", { enumerable: true, get: function () { return DLQManager_1.KafkaDLQManager; } });
+Object.defineProperty(exports, "DLQManager", { enumerable: true, get: function () { return DLQManager_1.DLQManager; } });
 const ConsumerWrapper_1 = require("./ConsumerWrapper");
-Object.defineProperty(exports, "KafkaConsumerWrapper", { enumerable: true, get: function () { return ConsumerWrapper_1.KafkaConsumerWrapper; } });
+Object.defineProperty(exports, "ConsumerWrapper", { enumerable: true, get: function () { return ConsumerWrapper_1.ConsumerWrapper; } });
 const ClientWrapper_1 = require("./ClientWrapper");
-Object.defineProperty(exports, "KafkaClientWrapper", { enumerable: true, get: function () { return ClientWrapper_1.KafkaClientWrapper; } });
+Object.defineProperty(exports, "ClientWrapper", { enumerable: true, get: function () { return ClientWrapper_1.ClientWrapper; } });
 const ErrorHandling_1 = require("./ErrorHandling");
 Object.defineProperty(exports, "ErrorHandling", { enumerable: true, get: function () { return ErrorHandling_1.ErrorHandling; } });

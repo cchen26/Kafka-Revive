@@ -20,9 +20,9 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.KafkaConsumerWrapper = void 0;
+exports.ConsumerWrapper = void 0;
 const ErrorHandling_1 = require("./ErrorHandling");
-class KafkaConsumerWrapper {
+class ConsumerWrapper {
     constructor(client, topic, callback) {
         this.client = client;
         this.topic = topic;
@@ -55,4 +55,4 @@ class KafkaConsumerWrapper {
         }
     }
 }
-exports.KafkaConsumerWrapper = KafkaConsumerWrapper;
+exports.ConsumerWrapper = ConsumerWrapper;

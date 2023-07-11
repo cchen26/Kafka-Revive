@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.KafkaProducerWrapper = void 0;
+exports.ProducerWrapper = void 0;
 const ErrorHandling_1 = require("./ErrorHandling");
-class KafkaProducerWrapper {
+class ProducerWrapper {
     constructor(retry, kafkaJSClient) {
         this.retry = retry;
         this.kafkaJSClient = kafkaJSClient;
@@ -41,4 +41,4 @@ class KafkaProducerWrapper {
         });
     }
 }
-exports.KafkaProducerWrapper = KafkaProducerWrapper;
+exports.ProducerWrapper = ProducerWrapper;

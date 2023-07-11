@@ -9,9 +9,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.KafkaDLQManager = void 0;
+exports.DLQManager = void 0;
 const ErrorHandling_1 = require("./ErrorHandling");
-class KafkaDLQManager {
+class DLQManager {
     constructor(client, topic, callback) {
         this.topic = topic;
         this.client = client;
@@ -68,7 +68,7 @@ class KafkaDLQManager {
             catch (e) {
                 yield producer.send({
                     messages: message.messages,
-                    topic: `${this.topic}.deadLetterQueue`,
+                    topic: `${this.topic}.DeadLetterQueue`,
                 });
                 yield producer.disconnect();
                 const newError = new ErrorHandling_1.ErrorHandling(e, this.constructor.name, "producer.send");
@@ -175,4 +175,4 @@ class KafkaDLQManager {
         return processMessages;
     }
 }
-exports.KafkaDLQManager = KafkaDLQManager;
+exports.DLQManager = DLQManager;

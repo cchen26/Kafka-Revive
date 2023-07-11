@@ -1,5 +1,5 @@
 import { MessageOptions, ConsumerMessageHandler, ConsumerSubscriptionOptions } from "./Interfaces";
-export declare class KafkaClientWrapper {
+export declare class ClientWrapper {
     client: any;
     topic: string;
     callback?: (message: any) => boolean;
@@ -12,8 +12,8 @@ export declare class KafkaClientWrapper {
     createConsumer(groupId: {
         groupId: string;
     }): {
-        connect: any;
-        subscribe: (input?: ConsumerSubscriptionOptions) => any;
-        run: (input: ConsumerMessageHandler) => any;
+        connect: () => Promise<void>;
+        subscribe: (input?: ConsumerSubscriptionOptions) => Promise<void>;
+        run: (input: ConsumerMessageHandler) => Promise<void>;
     };
 }

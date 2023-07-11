@@ -1,5 +1,5 @@
 import { ConsumerMessageHandler, ConsumerSubscriptionOptions } from "./Interfaces";
-export declare class KafkaConsumerWrapper {
+export declare class ConsumerWrapper {
     private client;
     private topic;
     private callback?;
@@ -9,5 +9,5 @@ export declare class KafkaConsumerWrapper {
     }): any;
     subscribe(consumer: any, input?: ConsumerSubscriptionOptions): any;
     run(consumer: any, input: ConsumerMessageHandler): void;
-    disconnect(): any;
+    disconnect(): Promise<void> | undefined;
 }

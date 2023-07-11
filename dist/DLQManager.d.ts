@@ -1,5 +1,5 @@
 import { ConsumerMessageHandler, ConsumerSubscriptionOptions, MessagePayload } from "./Interfaces";
-export declare class KafkaDLQManager {
+export declare class DLQManager {
     client: any;
     topic: string;
     callback?: (message: any) => boolean;
@@ -14,6 +14,6 @@ export declare class KafkaDLQManager {
     }): () => Promise<void>;
     consumerSubscribe(input?: ConsumerSubscriptionOptions): () => Promise<void>;
     consumerRun(input: ConsumerMessageHandler): () => Promise<void>;
-    retryConnect(): any;
+    retryConnect(): Promise<void>;
     retryProcessMessages(): () => Promise<void>;
 }
