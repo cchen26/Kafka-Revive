@@ -8,8 +8,6 @@
 
   <p align="center">
     Lightweight Message Re-processing Wrapper Library for KafkaJs
-  <br />
-  <a href="https://kafka-cascade.io"><strong>Demo and Docs »</strong></a>
   </p>
 </p>
 
