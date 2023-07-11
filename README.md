@@ -10,16 +10,20 @@ The Kafka-Revive library consists of multiple TypeScript files that provide a co
 
 Please note that Kafka-Revive is not officially associated with Apache Kafka.
 
+## Install<a name="install"></a>
+
+Install Kafka-Revive as an NPM package, by running this command in your terminal:
+
+`npm install kafka-revive`
+
+Reference it in your code like with any library with the `Required` keyword.
+
 ## Documentation<a name="documentation"></a>
 
-The project documentation contains detailed information and instructions on how to use the software. It includes the following sections:
-
-1. Installation
-2. Usage
-3. Configuration
-4. FAQ
-
-Each section provides step-by-step guidance and explanations to help users effectively utilize the software.
+[ClientWrapper](docs/ClientWrapper_ex.md)
+[ProducerWrapper](docs/ProducerWrapper_ex.md)
+[ConsumerWrapper](docs/ConsumerWrapper_ex.md)
+[DLQManager](docs/DLQManager_ex.md)
 
 ## Author<a name="author"></a>
 
