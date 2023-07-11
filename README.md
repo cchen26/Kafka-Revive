@@ -1,4 +1,4 @@
-<img src="docs/Logo.png" alt="Logo" width="100" height="110>
+<img src="docs/Logo.png" alt="Logo" width="100" height="110">
 
 # Table of Contents
 
