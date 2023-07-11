@@ -1,9 +1,9 @@
-import { KafkaConsumerWrapper } from "../src/ConsumerWrapper";
+import { ConsumerWrapper } from "../src/ConsumerWrapper";
 
-describe("KafkaConsumerWrapper", () => {
+describe("ConsumerWrapper", () => {
   let mockClient: any;
   let mockConsumer: any;
-  let wrapper: KafkaConsumerWrapper;
+  let wrapper: ConsumerWrapper;
 
   beforeEach(() => {
     mockConsumer = {
@@ -17,7 +17,7 @@ describe("KafkaConsumerWrapper", () => {
       disconnect: jest.fn(),
     };
 
-    wrapper = new KafkaConsumerWrapper(mockClient, "test-topic");
+    wrapper = new ConsumerWrapper(mockClient, "test-topic");
   });
 
   afterEach(() => {
@@ -100,7 +100,7 @@ describe("KafkaConsumerWrapper", () => {
     });
 
     it("should do nothing if the client does not exist", () => {
-      wrapper = new KafkaConsumerWrapper(undefined, "test-topic");
+      wrapper = new ConsumerWrapper(undefined, "test-topic");
       expect(wrapper.disconnect()).toBeUndefined();
     });
   });

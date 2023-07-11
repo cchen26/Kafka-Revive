@@ -1,10 +1,10 @@
-import { KafkaClientWrapper } from "../src/ClientWrapper";
+import { ClientWrapper } from "../src/ClientWrapper";
 
-describe("KafkaClientWrapper", () => {
+describe("ClientWrapper", () => {
   let mockClient: any;
   let mockProducer: any;
   let mockConsumer: any;
-  let wrapper: KafkaClientWrapper;
+  let wrapper: ClientWrapper;
 
   beforeEach(() => {
     mockProducer = {
@@ -24,7 +24,7 @@ describe("KafkaClientWrapper", () => {
       admin: jest.fn(),
     };
 
-    wrapper = new KafkaClientWrapper(mockClient, "test-topic");
+    wrapper = new ClientWrapper(mockClient, "test-topic");
   });
 
   describe("createProducer", () => {

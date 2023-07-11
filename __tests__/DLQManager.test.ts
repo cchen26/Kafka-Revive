@@ -1,11 +1,11 @@
-import { KafkaDLQManager } from "../src/DLQManager";
+import { DLQManager } from "../src/DLQManager";
 
-describe("KafkaDLQManager", () => {
+describe("DLQManager", () => {
   let mockClient: any;
   let mockAdmin: any;
   let mockProducer: any;
   let mockConsumer: any;
-  let wrapper: KafkaDLQManager;
+  let wrapper: DLQManager;
 
   beforeEach(() => {
     mockProducer = {
@@ -34,7 +34,7 @@ describe("KafkaDLQManager", () => {
       admin: jest.fn(() => mockAdmin),
     };
 
-    wrapper = new KafkaDLQManager(mockClient, "test-topic");
+    wrapper = new DLQManager(mockClient, "test-topic");
   });
 
   afterEach(() => {
@@ -186,7 +186,7 @@ describe("KafkaDLQManager", () => {
   describe("retryConnect", () => {
     it("should connect the DLQ consumer", async () => {
       const connect = wrapper.retryConnect();
-      await connect();
+      await connect;
       expect(mockConsumer.connect).toHaveBeenCalled();
     });
   });

@@ -1,9 +1,9 @@
-import { KafkaProducerWrapper } from "../src/ProducerWrapper";
+import { ProducerWrapper } from "../src/ProducerWrapper";
 import { ErrorHandling } from "../src/ErrorHandling";
 
-describe("KafkaProducerWrapper", () => {
+describe("ProducerWrapper", () => {
   let mockKafkaJSClient: any;
-  let wrapper: KafkaProducerWrapper;
+  let wrapper: ProducerWrapper;
 
   beforeEach(() => {
     mockKafkaJSClient = {
@@ -14,7 +14,7 @@ describe("KafkaProducerWrapper", () => {
       })),
     };
 
-    wrapper = new KafkaProducerWrapper(3, mockKafkaJSClient);
+    wrapper = new ProducerWrapper(3, mockKafkaJSClient);
   });
 
   afterEach(() => {
