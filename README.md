@@ -1,3 +1,5 @@
+![Kafka-Revive](docs/Logo.png)
+
 # Table of Contents
 
 1. [About](#about)
