@@ -12,18 +12,24 @@ Please note that Kafka-Revive is not officially associated with Apache Kafka.
 
 ## Install<a name="install"></a>
 
-Install Kafka-Revive as an NPM package, by running this command in your terminal:
+To incorporate Kafka-Revive into your project, follow these steps:
+
+Install Kafka-Revive as an NPM package by executing the following command in your terminal:
 
 `npm install kafka-revive`
 
-Reference it in your code like with any library with the `Required` keyword.
+Utilize Kafka-Revive in your code by including it using the require keyword, just as you would with any other library:
+
+```js
+const KafkaRevive = require("kafka-revive");
+```
 
 ## Documentation<a name="documentation"></a>
 
-[ClientWrapper](docs/ClientWrapper_ex.md)
-[ProducerWrapper](docs/ProducerWrapper_ex.md)
-[ConsumerWrapper](docs/ConsumerWrapper_ex.md)
-[DLQManager](docs/DLQManager_ex.md)
+1. [ClientWrapper](docs/ClientWrapper_ex.md)
+2. [ProducerWrapper](docs/ProducerWrapper_ex.md)
+3. [ConsumerWrapper](docs/ConsumerWrapper_ex.md)
+4. [DLQManager](docs/DLQManager_ex.md)
 
 ## Author<a name="author"></a>
 
