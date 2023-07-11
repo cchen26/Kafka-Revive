@@ -1,4 +1,4 @@
-![Kafka-Revive](docs/Logo.png)
+<img src="docs/Logo.png" alt="Logo" width="100" height="110>
 
 # Table of Contents
 
