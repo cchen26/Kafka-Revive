@@ -2,6 +2,13 @@
   "name": "kafka-revive",
   "version": "1.0.0",
   "description": "Lightweight Message Re-processing Wrapper Library for KafkaJs",
+  "files": [
+    "src",
+    "dist",
+    "package.json",
+    "README.json",
+    "docs"
+  ],
   "main": "dist/index.js",
   "module": "dist/module.mjs",
   "types": "dist/index.d.ts",
@@ -12,11 +19,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cchen26/Kafka-Revive.git"
+    "url": "https://github.com/cchen26/Kafka-Revive"
   },
   "keywords": [
     "kafkajs",
-    "Message re-processing",
+    "Message Re-processing",
     "kafka",
     "Dead Letter Queue",
     "Kafkajs wrapper"
@@ -32,7 +39,6 @@
     "@types/jest": "^29.5.2",
     "@types/node": "^20.4.1",
     "jest": "^29.6.1",
-    "jsdoc": "^4.0.2",
     "ts-jest": "^29.1.1",
     "ts-node": "^10.9.1",
     "tsup": "^7.1.0",
