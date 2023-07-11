@@ -1,9 +1,7 @@
 <p align="center">
 
-  <h3 align="center">Kafka Revive</h3>
-
   <div align="center">
-      <img src="./docs/Logo.png" alt="Logo" width="100" height="110">
+      <img src="./docs/Logo.png" alt="Logo" width="150" height="150">
   </div>
 
   <p align="center">
